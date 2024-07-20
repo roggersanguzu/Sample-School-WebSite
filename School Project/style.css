@@ -1,0 +1,549 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/**************************************************Navigation***************************************************/
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background-color: #17153b;
+  color: white;
+  width: 100%;
+  height: 5rem;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: 0.3s;
+  margin-bottom: 10rem;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  font-size: bold;
+  transition: 0.3s;
+}
+nav a {
+  text-decoration: none;
+  transition: 0.3s;
+  color: white;
+}
+
+.contact {
+  margin-right: 1rem;
+  border-radius: 3rem;
+  width: 5rem;
+  height: 1.5rem;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  color: black;
+}
+span {
+  margin-left: 3rem;
+}
+span img {
+  width: 5rem;
+  height: 2rem;
+  border: solid yellowgreen;
+  border-radius: 1rem;
+}
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 1rem;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  .contact {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+  }
+  span img {
+    margin-left: 3rem;
+  }
+  span {
+    margin-left: 0;
+  }
+}
+/**************************************************Home****************************************************************/
+.home {
+  width: 100vw;
+  height: 95vh;
+  position: relative;
+  background-image: linear-gradient(
+      rgba(20, 10, 60, 0.3),
+      rgba(20, 10, 60, 0.3)
+    ),
+    url("./Photos/homback.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: white;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.welcome {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 800px;
+}
+
+.welcome h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.welcome p {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.explore {
+  margin-top: 1.5rem;
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  transition: 0.35s;
+  cursor: pointer;
+}
+
+.explore:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+@media (max-width: 768px) {
+  .home {
+    height: 120vh;
+  }
+  .welcome h2 {
+    margin-top: 20rem;
+  }
+  .explore {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/**************************************************About****************************************************************/
+.about {
+  color: white;
+  padding: 2rem 0;
+  background-image: linear-gradient(
+      rgba(20, 10, 60, 0.4),
+      rgba(20, 10, 60, 0.4)
+    ),
+    url(./Photos/arts.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.aboutcontainer {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about .left,
+.about .right {
+  width: 45%;
+  margin: 1rem 0;
+  padding: 2rem;
+  border-radius: 2rem;
+  border: 1px solid #ccc;
+  box-shadow: 1.5px 1.5px 1px 1px greenyellow;
+  transition: 0.3s;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.about .history {
+  width: 50%;
+  margin: 1rem auto;
+  padding: 2rem;
+  border: 1px solid #ccc;
+  box-shadow: 1.5px 1.5px 1px 1px greenyellow;
+  border-radius: 2rem;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.about .left:hover,
+.about .right:hover,
+.about .history:hover {
+  border-radius: 3rem;
+  cursor: pointer;
+}
+.more {
+  margin: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-right: 3rem;
+  padding-left: 3rem;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+.more:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .aboutcontainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about .left,
+  .about .right {
+    width: 90%;
+    margin: 1rem 0;
+  }
+
+  .about .history {
+    width: 90%;
+    margin: 1rem auto;
+  }
+}
+
+/**************************************************Programs****************************************************************/
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  padding-top: 0;
+  background-image: linear-gradient(
+      rgba(20, 10, 60, 0.5),
+      rgba(20, 10, 60, 0.5)
+    ),
+    url("./Photos/programback.jpeg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+
+.programmes {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.programmes h3 {
+  margin: 2rem 0;
+  font-size: 2rem;
+}
+
+.master {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 1rem;
+}
+
+.item {
+  flex: 0 0 auto;
+  width: 300px;
+  padding: 35px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(30px);
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+.item .uimage {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #fff;
+  padding: 4px;
+}
+
+.item .name {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.item ul {
+  list-style: none;
+  padding: 0;
+}
+
+.item .message {
+  font-size: 1.2rem;
+  padding: 10px 35px;
+  border-radius: 6px;
+  margin-top: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.35s;
+}
+
+.item .message:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid;
+}
+
+@media (max-width: 768px) {
+  .master {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .item {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
+/**************************************************Timetable****************************************************************/
+
+.timetable {
+  background-image: linear-gradient(
+      rgba(20, 10, 60, 0.7),
+      rgba(20, 10, 60, 0.7)
+    ),
+    url("./Photos/programback.jpeg");
+  background-position: center;
+  background-size: cover;
+  padding: 2rem 1rem;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.timetable h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+.leader {
+  display: flex;
+  gap: 1rem;
+}
+.leader .add,
+.leader .remove {
+  padding: 0.5rem 2rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.35s;
+}
+.leader .add:hover,
+.leader .remove:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+}
+.classes {
+  width: 90vw;
+  height: auto;
+  border: 1px solid greenyellow;
+  border-radius: 2rem;
+  margin-top: 0.5rem;
+  color: white;
+  font-size: 1.2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: auto;
+  cursor: po;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+thead th {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+tbody th {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+table th,
+table td {
+  padding: 0.5rem;
+  border: 1px solid white;
+}
+@media (max-width: 768px) {
+  .timetable {
+    padding: 1rem 0.5rem;
+  }
+  .timetable h3 {
+    font-size: 1.5rem;
+  }
+  .leader {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .leader .add,
+  .leader .remove {
+    padding: 0.5rem 1rem;
+  }
+  .classes {
+    width: 100%;
+  }
+  table {
+    font-size: 1rem;
+  }
+  thead th,
+  tbody th {
+    font-size: 0.9rem;
+  }
+}
+
+/**************************************************Contact****************************************************************/
+.calls {
+  background-image: linear-gradient(
+      rgba(20, 10, 60, 0.5),
+      rgba(20, 10, 60, 0.5)
+    ),
+    url("./Photos/socials.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 2rem 1rem;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calls h2 {
+  text-align: center;
+  color: whitesmoke;
+  margin-bottom: 2rem;
+}
+
+.controller {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.controller .emails,
+.controller .contacts,
+.controller .socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #ccc;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 30%;
+  box-sizing: border-box;
+}
+
+.controller .emails h3,
+.controller .contacts h3,
+.controller .socials h3 {
+  margin-bottom: 1rem;
+}
+
+.socials img {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+  transition: 0.35s;
+}
+
+.socials a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.socials a:hover {
+  color: yellowgreen;
+}
+
+@media (max-width: 768px) {
+  .calls {
+    padding: 1rem;
+    min-height: 60vh;
+  }
+
+  .controller {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .controller .emails,
+  .controller .contacts,
+  .controller .socials {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+}
+
+/**************************************************Footer****************************************************************/
+.footer {
+  background-color: #17153b;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+}
