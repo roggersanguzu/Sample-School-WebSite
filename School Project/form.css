@@ -60,6 +60,11 @@ label {
   border: none;
   border-radius: 2rem;
   cursor: pointer;
+  transition: 0.3s;
+}
+.submit:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid black;
 }
 
 @media (max-width: 768px) {
